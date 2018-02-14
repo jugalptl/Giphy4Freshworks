@@ -12,8 +12,11 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.igroup.giphy4freshworks.Activities.MainActivity;
+import com.example.igroup.giphy4freshworks.Extra.FavoriteGif;
 import com.example.igroup.giphy4freshworks.Pojo.Data;
 import com.example.igroup.giphy4freshworks.R;
+
+import org.greenrobot.eventbus.EventBus;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,6 +34,7 @@ public class GifAdapter extends RecyclerView.Adapter<GifAdapter.GifViewHolder>  
     context =mainActivity;
     this.itemsFiltered=gifList;
     this.items = gifList;
+    favGifs = new ArrayList<>();
     }
 
 
@@ -57,14 +61,21 @@ public class GifAdapter extends RecyclerView.Adapter<GifAdapter.GifViewHolder>  
                 if (isChecked)
                 {
                     favGifs.add(items.get(position));
+                    System.out.println("favgif"+favGifs.toString());
+                    //EventBus.getDefault().post(new FavoriteGif().setFav_gifs(favGifs));
                 }
             }
+
         });
+
+
     }
     @Override
     public int getItemCount() {
         return items == null ? 0: items.size();
     }
+
+
 
     public void setFilter(List<Data> itemsFiltered) {
         items = new ArrayList<>();

@@ -12,6 +12,8 @@ import com.example.igroup.giphy4freshworks.Fragments.Fragment_Trending_Gifs;
 import com.example.igroup.giphy4freshworks.Pojo.Data;
 import com.example.igroup.giphy4freshworks.R;
 
+import org.greenrobot.eventbus.EventBus;
+
 import java.util.List;
 
 
@@ -24,6 +26,8 @@ public class MainActivity extends AppCompatActivity implements Fragment_Trending
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+//        EventBus.getDefault().register(this);
         setContentView(R.layout.activity_main);
         toolbar =(Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
