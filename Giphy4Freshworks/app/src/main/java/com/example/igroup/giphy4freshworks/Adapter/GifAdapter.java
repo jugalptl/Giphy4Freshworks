@@ -62,7 +62,7 @@ public class GifAdapter extends RecyclerView.Adapter<GifAdapter.GifViewHolder>  
                 {
                     favGifs.add(items.get(position));
                     System.out.println("favgif"+favGifs.toString());
-                    //EventBus.getDefault().post(new FavoriteGif().setFav_gifs(favGifs));
+                    EventBus.getDefault().post(new FavoriteGif(favGifs));
                 }
             }
 

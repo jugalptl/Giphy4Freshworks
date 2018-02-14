@@ -19,7 +19,7 @@
                 android:id="@+id/img_fav_gif"
                 android:scaleType="fitXY"
                 android:padding="6dp"
-                android:src="@drawable/lighthouse" /><!--android:src="@drawable/lighthouse"-->
+                 /><!--android:src="@drawable/lighthouse"-->
 
         </RelativeLayout>
     </android.support.v7.widget.CardView>

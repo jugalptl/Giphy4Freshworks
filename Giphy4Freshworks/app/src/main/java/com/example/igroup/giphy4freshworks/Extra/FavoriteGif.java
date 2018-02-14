@@ -14,7 +14,7 @@ public class FavoriteGif {
         return fav_gifs;
     }
 
-    public void setFav_gifs(List<Data> fav_gifs) {
+    public FavoriteGif(List<Data> fav_gifs) {
         this.fav_gifs = fav_gifs;
     }
 
