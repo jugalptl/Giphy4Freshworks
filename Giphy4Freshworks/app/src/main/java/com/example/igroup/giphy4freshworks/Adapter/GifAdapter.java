@@ -64,6 +64,7 @@ public class GifAdapter extends RecyclerView.Adapter<GifAdapter.GifViewHolder>  
                     System.out.println("favgif"+favGifs.toString());
                     EventBus.getDefault().post(new FavoriteGif(favGifs));
                 }
+
             }
 
         });
